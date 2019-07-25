@@ -1,0 +1,12 @@
+server:
+   port: 18004
+
+spring:
+   rabbitmq:
+        host: rxqwkj.com
+        port: 5672
+        username: guest
+        password: 'guest'
+
+logging:
+  file: logs/mc-service.log
