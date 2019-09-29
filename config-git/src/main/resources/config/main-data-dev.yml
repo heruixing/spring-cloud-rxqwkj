@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     druid:
-      url: jdbc:mysql://${MYSQL_HOST:rxqwkj.com}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      url: jdbc:mysql://${MYSQL_HOST:192.168.7.171}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
       username: root
       password: "Hrx950815!"
       driver-class-name: com.mysql.jdbc.Driver
@@ -46,7 +46,7 @@ redis:
     password: 'Hrx950815!'
 
 rabbitmq:
-    host: rxqwkj.com
+    host: 192.168.7.171
     port: 5672
     username: guest
     password: 'guest'

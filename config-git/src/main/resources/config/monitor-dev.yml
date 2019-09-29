@@ -2,7 +2,7 @@ server:
   port: 18003
 spring:
   rabbitmq:
-      host: rxqwkkj.com
+      host: 192.168.7.171
       port: 5672
       username: guest
       password: 'guest'
