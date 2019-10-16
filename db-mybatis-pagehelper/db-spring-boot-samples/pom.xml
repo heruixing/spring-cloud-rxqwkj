@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.peng</groupId>
+            <groupId>com.rxqwkj.xing</groupId>
             <artifactId>db-spring-boot-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
