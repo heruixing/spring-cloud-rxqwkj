@@ -6,12 +6,12 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 'xxx!'
-    url: jdbc:mysql://${MYSQL_HOST:192.168.7.171}:${MYSQL_PORT:3306}/zipkin?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    password: 'Hrx950815!'
+    url: jdbc:mysql://${MYSQL_HOST:rxqwkj.com}:${MYSQL_PORT:3306}/zipkin?useUnicode=true&characterEncoding=UTF-8&useSSL=false
   sleuth:
     enabled: false
   rabbitmq:
-    host: 192.168.7.171
+    host: rxqwkj.com
     port: 5672
     password: 'guest'
     username: guest

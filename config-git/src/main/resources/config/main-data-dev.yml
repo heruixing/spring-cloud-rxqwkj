@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     druid:
-      url: jdbc:mysql://${MYSQL_HOST:192.168.7.171}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      url: jdbc:mysql://${MYSQL_HOST:rxqwkj.com}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
       username: root
       password: "Hrx950815!"
       driver-class-name: com.mysql.jdbc.Driver
@@ -30,33 +30,39 @@ spring:
         reset-enable: false
         login-username: sysadmin
         login-password: "000000"
+  redis:
+      #      database: 0
+      #      host: ${REDIS_HOST:rxqwkj.com}
+      #      port: ${REDIS_PORT:6379}
+      #    database: 0
+      #    host: ${REDIS_HOST:rxqwkj.com}
+      #    port: ${REDIS_PORT:6379}
+          cluster:
+             nodes:
+              - rxqwkj.com:7001
+              - rxqwkj.com:7002
+              - rxqwkj.com:7003
+              - rxqwkj.com:7004
+             max-redirects: 4
+          pool:
+             max-idle: 500  # 连接池中的最大空闲连接，默认值也是8。
+             min-idle: 50  #连接池中的最小空闲连接，默认值也是0。
+             max-active: 2000  # 如果赋值为-1，则表示不限制；如果pool已经分配了maxActive个jedis实例，则此时pool的状态为exhausted(耗尽)。
+             max-wait: 1000  # 等待可用连接的最大时间，单位毫秒，默认值为-1，表示永不超时。如果超过等待时间，则直接抛出JedisConnectionException
+          password: Hrx950815!
 
-redis:
-    cluster:
-          nodes:
-          - 192.168.7.171:7001
-          - 192.168.7.171:7002
-          - 192.168.7.171:7003
-          max-redirects: 3
-    pool:
-            max-idle: 500  # 连接池中的最大空闲连接，默认值也是8。
-            min-idle: 50  #连接池中的最小空闲连接，默认值也是0。
-            max-active: 2000  # 如果赋值为-1，则表示不限制；如果pool已经分配了maxActive个jedis实例，则此时pool的状态为exhausted(耗尽)。
-            max-wait: 1000  # 等待可用连接的最大时间，单位毫秒，默认值为-1，表示永不超时。如果超过等待时间，则直接抛出JedisConnectionException
-    password: 'Hrx950815!'
-
-rabbitmq:
-    host: 192.168.7.171
-    port: 5672
-    username: guest
-    password: 'guest'
+  rabbitmq:
+      host: rxqwkj.com
+      port: 5672
+      username: guest
+      password: 'guest'
 # 权限配置
 security:
   ignored: |
     /css/**,/js/**,/favicon.ico,/webjars/**,/images/**,
     /hystrix.stream/**,/info,/error,/health,/env,/metrics,/trace,/dump,
     /jolokia,/configprops,/activiti,/logfile,/refresh,/flyway,/liquibase,/loggers,
-    /user/name/**,/user/phone/**,/role/user/**,/menu/user/*,/client/all
+    /user/name/**,/user/phone/**,/role/user/**,/menu/user/*,/client/all,/store/**
   oauth2:
     resource:
       jwt:

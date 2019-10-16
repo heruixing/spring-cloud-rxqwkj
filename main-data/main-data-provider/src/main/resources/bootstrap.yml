@@ -16,3 +16,13 @@ spring:
         enabled: true
       profile: ${spring.profiles.active}
       label: ${spring.profiles.active}
+
+#server:
+#  port: 18102
+#  ssl:
+#    key-store: classpath:2950033_wx.rxqwkj.com.pfx
+#    key-store-type: PKCS12
+#    key-store-password: FwpRcA4f
+#
+#http:
+#  port: 18002
