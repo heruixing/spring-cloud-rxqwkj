@@ -3,7 +3,7 @@ package com.rxqwkj.main.api.pojo.response;
 import java.util.List;
 
 /**
- * Created by fp295 on 2018/5/15.
+ * Created by heruixing on 2018/5/15.
  */
 public class ModuleAndSystemResponse {
 

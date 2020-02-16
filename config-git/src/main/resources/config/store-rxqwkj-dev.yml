@@ -1,0 +1,100 @@
+server:
+#  port: 18013
+# 数据源配置
+spring:
+  datasource:
+    druid:
+#      url: jdbc:mysql://${MYSQL_HOST:rxqwkj.com}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#      username: root
+#      password: "Hrx950815!"
+      url: jdbc:mysql://${MYSQL_HOST:117.187.233.210}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: "Asp123456$"
+      driver-class-name: com.mysql.jdbc.Driver
+      max-active: 20
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      filters: stat, wall
+      # 监控配置
+      web-stat-filter:
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+      stat-view-servlet:
+        url-pattern: /druid/*
+        reset-enable: false
+        login-username: sysadmin
+        login-password: "000000"
+  redis:
+      #      database: 0
+      #      host: ${REDIS_HOST:rxqwkj.com}
+      #      port: ${REDIS_PORT:6379}
+      #    database: 0
+      #    host: ${REDIS_HOST:rxqwkj.com}
+      #    port: ${REDIS_PORT:6379}
+          cluster:
+             nodes:
+#              - rxqwkj.com:7001
+            ##              - rxqwkj.com:7002
+            ##              - rxqwkj.com:7003
+            ##              - rxqwkj.com:7004
+               - 10.2.9.36:7001
+               - 10.2.9.36:7002
+               - 10.2.9.36:7003
+             max-redirects: 4
+          pool:
+             max-idle: 500  # 连接池中的最大空闲连接，默认值也是8。
+             min-idle: 50  #连接池中的最小空闲连接，默认值也是0。
+             max-active: 2000  # 如果赋值为-1，则表示不限制；如果pool已经分配了maxActive个jedis实例，则此时pool的状态为exhausted(耗尽)。
+             max-wait: 1000  # 等待可用连接的最大时间，单位毫秒，默认值为-1，表示永不超时。如果超过等待时间，则直接抛出JedisConnectionException
+#          password: Hrx950815!
+
+  rabbitmq:
+    host: 47.106.76.47
+    port: 5672
+    username: heruixing
+    password: 'Hrx950815!'
+
+# 权限配置
+security:
+  ignored: |
+    /css/**,/js/**,/favicon.ico,/webjars/**,/images/**,
+    /hystrix.stream/**,/info,/error,/health,/env,/metrics,/trace,/dump,
+    /jolokia,/configprops,/activiti,/logfile,/refresh,/flyway,/liquibase,/loggers,
+    /user/name/**,/user/phone/**,/role/user/**,/menu/user/*,/client/all,/v2/api-docs,/
+    swagger/**/**/,swagger-resources/configuration/ui,/swagger-resources,
+    /swagger-resources/configuration/security,/swagger-ui.html,/store/getStoreTatle/**,/wx/**/**
+  oauth2:
+    resource:
+      jwt:
+        key-uri: http://${AUTH_CENTER_HOST:localhost}:${AUTH_CENTER_PORT:18001}/auth/oauth/token_key
+      id: ${spring.application.name}
+      serviceId: ${spring.application.name}
+# mybatis 配置
+mybatis:
+  type-aliases-package: com.rxqwkj.main.api.mapper.model
+  mapper-locations: classpath:mybatis/mapper/*.xml
+logging:
+  file: logs/store-rxqwkj.log
+
+# Swagger配置
+swagger:
+  enable: true                      # 开启，默认false
+  group-name: mainApi               # 组名称，默认default
+  enableToken: true                 # 开启token验证，默认false
+  apiInfoTitle: 基础管理服务             # 标题，默认Api Documentation
+  apiInfoDescription: 基础管理服务，提供用户、租户等基础接口       # 描述，默认使用 apiInfoTitle 值
+  apiInfoAuthor: heruixing            # 作者，默认XXX
+  basePackage: com.rxqwkj.main.provider.controller              # 扫描包，默认com.aspirecn.*.provider.controller
+#  apiInfoEmail: heruixing@yangchuang.com             # 作者Email，默认apiInfoAuthor@apiInfoAuthor.com
+#  apiInfoUrl: heruixing@yangchuang.com               # 作者URL，默认 apiInfoEmail
+#  apiInfoTermsOfServiceUrl:  # 服务条款地址，默认空字符串
+#  apiInfoVersion: 1.0           # 版本，默认1.0

@@ -1,15 +1,15 @@
 package com.rxqwkj.main.provider.config;
 
-import com.peng.common.constant.MqQueueConstant;
+import com.rxqwkj.common.constant.MqQueueConstant;
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by fp295 on 2018/6/26.
+ * Created by heruixing on 2018/6/26.
  * rabbit初始化
  */
-@Configuration
+//@Configuration
 public class RabbitConfig {
     /**
      * 初始化 log队列

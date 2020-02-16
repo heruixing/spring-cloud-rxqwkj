@@ -35,6 +35,10 @@ var router = new Router({
           name: 'AppManaged',
           component: resolve => require(['@/components/app/AppManaged.vue'], resolve)
         }, {
+          path: '/store',
+          name: 'storeManaged',
+          component: resolve => require(['@/components/store/storeManaged.vue'], resolve)
+        }, {
           path: '/iframe',
           name: 'Iframe',
           component: resolve => require(['@/components/iframe/Iframe.vue'], resolve)

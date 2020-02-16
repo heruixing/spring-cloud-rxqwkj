@@ -3,10 +3,14 @@ server:
 
 spring:
   rabbitmq:
-    host: rxqwkj.com
+    host: 47.106.76.47
     port: 5672
-    password: 'guest'
-    username: guest
+    username: heruixing
+    password: 'Hrx950815!'
+#    host: rxqwkj.com
+#    port: 5672
+#    password: 'guest'
+#    username: guest
 
 zuul:
   routes:

@@ -9,17 +9,17 @@ phone: 13100000000 verifyCode: 1000
 ## Model
 图片待续  
   
-* [api-gateway](https://github.com/fp2952/spring-cloud-base/tree/master/api-gateway)：api-gateway网关
-* [auth-center](https://github.com/fp2952/spring-cloud-base/tree/master/auth-center)：OAuth2授权中心
-* [common](https://github.com/fp2952/spring-cloud-base/tree/master/common)：通用脚手架
-* [config-git](https://github.com/fp2952/spring-cloud-base/tree/master/config-git)：git配置中心
-* [db-mybatis-pagehelper](https://github.com/fp2952/spring-cloud-base/tree/master/db-mybatis-pagehelper)：Mybatis通用Mapper、分页模块
-* [docker-compose](https://github.com/fp2952/spring-cloud-base/tree/master/docker-compose)：docker-compose编排
-* [main-data](https://github.com/fp2952/spring-cloud-base/tree/master/main-data)：基础数据模块
-* [mc-service](https://github.com/fp2952/spring-cloud-base/tree/master/mc-service)：消息组件 
-* [visul/monitor](https://github.com/fp2952/spring-cloud-base/tree/master/visul/monitor/)：admin监控服务 
-* [visul/zipkin-db](https://github.com/fp2952/spring-cloud-base/tree/master/visul/zipkin-db)：zipkin链路追踪服务 
-* [web-app](https://github.com/fp2952/spring-cloud-base/tree/master/web-app)：前端vue项目 
+* [api-gateway](https://github.com/heruixing2/spring-cloud-base/tree/master/api-gateway)：api-gateway网关
+* [auth-center](https://github.com/heruixing2/spring-cloud-base/tree/master/auth-center)：OAuth2授权中心
+* [common](https://github.com/heruixing2/spring-cloud-base/tree/master/common)：通用脚手架
+* [config-git](https://github.com/heruixing2/spring-cloud-base/tree/master/config-git)：git配置中心
+* [db-mybatis-pagehelper](https://github.com/heruixing2/spring-cloud-base/tree/master/db-mybatis-pagehelper)：Mybatis通用Mapper、分页模块
+* [docker-compose](https://github.com/heruixing2/spring-cloud-base/tree/master/docker-compose)：docker-compose编排
+* [main-data](https://github.com/heruixing2/spring-cloud-base/tree/master/main-data)：基础数据模块
+* [mc-service](https://github.com/heruixing2/spring-cloud-base/tree/master/mc-service)：消息组件 
+* [visul/monitor](https://github.com/heruixing2/spring-cloud-base/tree/master/visul/monitor/)：admin监控服务 
+* [visul/zipkin-db](https://github.com/heruixing2/spring-cloud-base/tree/master/visul/zipkin-db)：zipkin链路追踪服务 
+* [web-app](https://github.com/heruixing2/spring-cloud-base/tree/master/web-app)：前端vue项目 
   
 ### 项目结构  
 ```
@@ -62,8 +62,8 @@ phone: 13100000000 verifyCode: 1000
 
 ## 相关博文
 * consul 注册中心  
-* [Spring Cloud OAuth2（一） 搭建授权服务](https://fp2952.github.io/jekyll/update/2016/05/13/Spring-cloud-oauth2.html)  
-* [Spring Cloud OAuth2（二） 扩展登陆方式：账户密码登陆、 手机验证码登陆、 二维码扫码登陆](https://fp2952.github.io/jekyll/update/2018/06/13/Spring-cloud-oauth2-login.html)  
+* [Spring Cloud OAuth2（一） 搭建授权服务](https://heruixing2.github.io/jekyll/update/2016/05/13/Spring-cloud-oauth2.html)  
+* [Spring Cloud OAuth2（二） 扩展登陆方式：账户密码登陆、 手机验证码登陆、 二维码扫码登陆](https://heruixing2.github.io/jekyll/update/2018/06/13/Spring-cloud-oauth2-login.html)  
 * api-gateway 网关  
 * main-data 基础数据模块  
 * common  
@@ -75,7 +75,7 @@ phone: 13100000000 verifyCode: 1000
 ### 依赖环境    
 JDK8、 Maven、 Mysql、 Redis、Consul、 Rabbitmq、Nodejs、 Docker(可选)、 docker-compose(可选)  
 ### 运行步骤  
-1. git clone https://github.com/fp2952/spring-cloud-base.git
+1. git clone https://github.com/heruixing2/spring-cloud-base.git
 1. Mysql导入数据： 运行main-data/schema.sql 文件；    
 2. 更改配置文件，此项目默认本地配置，更改 config-git/src/main/resource/config 下的配置文件，主要需修改数据库链接、 Redis链接、 Rabbitmq链接等；     
 3. 启动 Consul (下载地址： https://www.consul.io/downloads.html)， window下载解压完为exe可执行文件, 进入其文件夹下 cmd -> consul agent -dev 启动，此时可访问 http://localhost:8500 查看Consul Ui页面；    

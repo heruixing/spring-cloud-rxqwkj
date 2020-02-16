@@ -68,7 +68,7 @@
         <!--footer-->
         <el-footer height="40px">
           <el-col :span="24" class="main-foot">
-            2018 - 2019 © fp2952
+            2018 - 2019 © Heruixing
           </el-col>
         </el-footer>
       </el-container>
@@ -85,13 +85,13 @@ var Menu = {
   template: '<el-menu-item v-if="module.subModules.length === 0" :index="module.modulePath" ' +
   ':title="module.moduleName" :parent="module.parentId" :key="module.id" :disabled="module.active !== 1" :code="module.moduleCode" @click="click">' +
   '<i :class="module.moduleIcon ? module.moduleIcon : \'el-icon-star-off\'"></i>' +
-  '<span slot="title">{{$t(module.moduleCode)}}</span>' +
+  '<span slot="title">{{$t(module.moduleName)}}</span>' +
   '</el-menu-item>' +
   '<el-submenu v-else-if="module.subModules.length > 0" :title="module.moduleName" :parent="module.parentId" :code="module.moduleCode"' +
   ':index="module.modulePath" :key="module.id">' +
   '<template slot="title">' +
   '<i :class="module.moduleIcon ? module.moduleIcon : \'el-icon-star-off\'"></i>' +
-  '<span slot="title">{{$t(module.moduleCode)}}</span>' +
+  '<span slot="title">{{$t(module.moduleName)}}</span>' +
   '</template>' +
   '<main-menu v-for="item in module.subModules" :module="item" :key="item.id" @click="click"></main-menu>' +
   '</el-submenu>',

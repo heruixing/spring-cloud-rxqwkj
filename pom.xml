@@ -31,6 +31,7 @@
         <module>config-git</module>
         <module>visul</module>
         <module>mc-service</module>
+        <module>store-rxqwkj</module>
     </modules>
 
     <dependencyManagement>
@@ -54,6 +55,17 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>${docker.plugin.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>2.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>2.2.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

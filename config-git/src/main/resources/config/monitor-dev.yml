@@ -22,7 +22,7 @@ receiver:
   mobiles:
     - 17034642119
   emails: |
-    fp2952@163.com
+    heruixing2@163.com
 
 logging:
   file: logs/monitor.log

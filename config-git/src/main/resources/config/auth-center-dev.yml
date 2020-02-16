@@ -16,23 +16,29 @@ spring:
     #    port: ${REDIS_PORT:6379}
         cluster:
            nodes:
-            - rxqwkj.com:7001
-            - rxqwkj.com:7002
-            - rxqwkj.com:7003
-            - rxqwkj.com:7004
+#           -  :7001
+          ##            - rxqwkj.com:7002
+          ##            - rxqwkj.com:7003
+          ##            - rxqwkj.com:7004
+             - 10.2.9.36:7001
+             - 10.2.9.36:7002
+             - 10.2.9.36:7003
            max-redirects: 3
         pool:
            max-idle: 500  # 连接池中的最大空闲连接，默认值也是8。
            min-idle: 50  #连接池中的最小空闲连接，默认值也是0。
            max-active: 2000  # 如果赋值为-1，则表示不限制；如果pool已经分配了maxActive个jedis实例，则此时pool的状态为exhausted(耗尽)。
            max-wait: 1000  # 等待可用连接的最大时间，单位毫秒，默认值为-1，表示永不超时。如果超过等待时间，则直接抛出JedisConnectionException
-        password: Hrx950815!
+#        password: Hrx950815!
 
   datasource:
     druid:
-      url: jdbc:mysql://${MYSQL_HOST:rxqwkj.com}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#      url: jdbc:mysql://${MYSQL_HOST:rxqwkj.com}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+#      username: root
+#      password: "Hrx950815!"
+      url: jdbc:mysql://${MYSQL_HOST:117.187.233.210}:${MYSQL_PORT:3306}/main-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false
       username: root
-      password: "Hrx950815!"
+      password: "Asp123456$"
       driver-class-name: com.mysql.jdbc.Driver
       max-active: 20
       initial-size: 1
@@ -60,9 +66,9 @@ spring:
       request-context-attribute: request
 
   rabbitmq:
-      host: rxqwkj.com
+      host: 47.106.76.47
       port: 5672
-      username: guest
-      password: 'guest'
+      username: heruixing
+      password: 'Hrx950815!'
 logging:
   file: logs/auth-center.log

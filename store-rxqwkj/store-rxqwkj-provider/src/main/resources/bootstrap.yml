@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: store-rxqwkj
+  profiles:
+    active: dev
+  cloud:
+    consul:
+      host: ${CONSUL_HOST:127.0.0.1}
+      port: ${CONSUL_PORT:8500}
+      discovery:
+        prefer-ip-address: true
+    config:
+      fail-fast: true
+      discovery:
+        service-id: config-server
+        enabled: true
+      profile: ${spring.profiles.active}
+      label: ${spring.profiles.active}
+
+server:
+  port: 8781
+  ssl:
+    key-store: classpath:2950033_wx.rxqwkj.com.pfx
+    key-store-type: PKCS12
+    key-store-password: FwpRcA4f
+
+#http:
+#  port: 18002

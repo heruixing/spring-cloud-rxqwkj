@@ -1,7 +1,7 @@
 package com.rxqwkj.main.provider.controller;
 
 
-import com.peng.common.pojo.ResponseData;
+import com.rxqwkj.common.pojo.ResponseData;
 import com.rxqwkj.main.api.mapper.model.StoreTatle;
 import com.rxqwkj.main.api.pojo.ResponseCode;
 import com.rxqwkj.main.provider.service.StoreTatleService;
