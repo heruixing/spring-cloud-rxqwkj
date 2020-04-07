@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="main-data-provider" />
+        <module name="store-rxqwkj-provider" />
+        <module name="auth-center-api" />
+        <module name="db-spring-boot-starter" />
+        <module name="auth-spring-boot-starter" />
+        <module name="zipkin-db" />
+        <module name="store-rxqwkj-api" />
+        <module name="mc-service" />
+        <module name="main-data-api" />
+        <module name="auth-center-provider" />
+        <module name="config-git" />
+        <module name="auth-spring-boot-autoconfigure" />
+        <module name="common" />
+        <module name="main-data-client" />
+        <module name="api-gateway" />
+        <module name="monitor" />
+        <module name="db-spring-boot-autoconfigure" />
+        <module name="db-spring-boot-samples" />
+        <module name="store-rxqwkj-client" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

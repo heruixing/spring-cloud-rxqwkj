@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-center" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-center/auth-center-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-center/auth-center-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-center/auth-spring-boot-autoconfigure" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-center/auth-spring-boot-starter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-git" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db-mybatis-pagehelper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db-mybatis-pagehelper/db-spring-boot-autoconfigure" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db-mybatis-pagehelper/db-spring-boot-samples" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/db-mybatis-pagehelper/db-spring-boot-starter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main-data" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main-data/main-data-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main-data/main-data-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main-data/main-data-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mc-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/store-rxqwkj" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/store-rxqwkj/store-rxqwkj-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/store-rxqwkj/store-rxqwkj-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/store-rxqwkj/store-rxqwkj-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/visul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/visul/monitor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/visul/zipkin-db" charset="UTF-8" />
+  </component>
+</project>

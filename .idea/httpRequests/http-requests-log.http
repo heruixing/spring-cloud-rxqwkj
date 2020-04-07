@@ -1,0 +1,10 @@
+GET http://localhost:18002/system/validate/{projectName}
+
+###
+
+GET http://localhost:18002/logfile.json
+
+<> 2020-02-14T032236.200.txt
+
+###
+
